@@ -1,0 +1,53 @@
+<%= form_for(@medication) do |f| %>
+  <% if @medication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medication.errors.count, "error") %> prohibited this medication from being saved:</h2>
+
+      <ul>
+      <% @medication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :generic_name %><br>
+    <%= f.text_field :generic_name %>
+  </div>
+  <div class="field">
+    <%= f.label :int_name %><br>
+    <%= f.text_field :int_name %>
+  </div>
+  <div class="field">
+    <%= f.label :prescription_required %><br>
+    <%= f.check_box :prescription_required %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :origin %><br>
+    <%= f.text_field :origin %>
+  </div>
+  <div class="field">
+    <%= f.label :is_pack_size_splittable %><br>
+    <%= f.check_box :is_pack_size_splittable %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

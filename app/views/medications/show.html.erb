@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @medication.name %>
+</p>
+
+<p>
+  <strong>Generic name:</strong>
+  <%= @medication.generic_name %>
+</p>
+
+<p>
+  <strong>Int name:</strong>
+  <%= @medication.int_name %>
+</p>
+
+<p>
+  <strong>Prescription required:</strong>
+  <%= @medication.prescription_required %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @medication.quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @medication.price %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @medication.manufacturer %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @medication.origin %>
+</p>
+
+<p>
+  <strong>Is pack size splittable:</strong>
+  <%= @medication.is_pack_size_splittable %>
+</p>
+
+<%= link_to 'Edit', edit_medication_path(@medication) %> |
+<%= link_to 'Back', medications_path %>

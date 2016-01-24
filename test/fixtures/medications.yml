@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  generic_name: MyString
+  int_name: MyString
+  prescription_required: false
+  quantity: 1
+  price: 1.5
+  manufacturer: MyString
+  origin: MyString
+  is_pack_size_splittable: false
+
+two:
+  name: MyString
+  generic_name: MyString
+  int_name: MyString
+  prescription_required: false
+  quantity: 1
+  price: 1.5
+  manufacturer: MyString
+  origin: MyString
+  is_pack_size_splittable: false

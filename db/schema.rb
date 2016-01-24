@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160124073715) do
+ActiveRecord::Schema.define(version: 20160124172858) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -57,6 +57,20 @@ ActiveRecord::Schema.define(version: 20160124073715) do
     t.text     "drug_alergies"
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+  end
+
+  create_table "medications", force: :cascade do |t|
+    t.string   "name"
+    t.string   "generic_name"
+    t.string   "int_name"
+    t.boolean  "prescription_required",   default: false
+    t.integer  "quantity"
+    t.float    "price"
+    t.string   "manufacturer"
+    t.string   "origin"
+    t.boolean  "is_pack_size_splittable", default: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
 end
