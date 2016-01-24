@@ -1,0 +1,66 @@
+<%= render 'dashboards/navigation' %>
+<%= render 'dashboards/side_nav' %>
+<div id="page-wrapper">
+
+  <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Customers</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= link_to new_customer_path, class:"btn btn-primary btn-success btn-lg" do %>
+        <i class="fa fa-plus"></i> Add New Customer
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to '#', class:"btn btn-primary btn-warning btn-lg" do %>
+        <i class="fa fa-search"></i> Find a Customer
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to '#', class:"btn btn-primary btn-lg" do %>
+        <i class="fa fa-user"></i> Full Customer Profiles
+      <% end %>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 50px;">
+    <h3>Latest Customers</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th> </th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @customers.each do |customer| %>
+          <tr>
+            <td><%= customer.first_name %></td>
+            <td><%= customer.middle_name %></td>
+            <td><%= customer.last_name %></td>
+            <td><%= customer.dob %></td>
+            <td><%= customer.phone %></td>
+            <td><%= customer.shipping_address %></td>
+            <td><%= link_to customer do %>
+                  <i class="fa fa-info"></i> Details
+                <% end %>
+            </td>
+            <td><%= link_to customer, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-trash-o"></i> Delete
+                <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    
+</div>
+</div>
