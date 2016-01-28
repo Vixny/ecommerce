@@ -17,7 +17,7 @@ gem "twitter-bootstrap-rails"
 
 gem 'devise'
 
-gem 'searchkick'
+gem 'carrierwave-dropbox'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
