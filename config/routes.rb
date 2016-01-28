@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :doctors
   resources :medications
   resources :customers
   get 'pages/index'
