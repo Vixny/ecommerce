@@ -1,45 +1,39 @@
+<div class="row">
 <%= form_for(@doctor) do |f| %>
-  <% if @doctor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
 
-      <ul>
-      <% @doctor.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
+  <div class="col-md-6">
+    <div class="form-group">
     <%= f.label :doctors_name %><br>
-    <%= f.text_field :doctors_name %>
+    <%= f.text_field :doctors_name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :clinic_name %><br>
-    <%= f.text_field :clinic_name %>
+    <%= f.text_field :clinic_name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :clinic_address %><br>
-    <%= f.text_field :clinic_address %>
+    <%= f.text_field :clinic_address, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :clinic_phone %><br>
-    <%= f.text_field :clinic_phone %>
+    <%= f.text_field :clinic_phone, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :doctors_direct_phone %><br>
-    <%= f.text_field :doctors_direct_phone %>
+    <%= f.text_field :doctors_direct_phone, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :fax_number %><br>
-    <%= f.text_field :fax_number %>
+    <%= f.text_field :fax_number, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-success" %>
+    <%= link_to 'Cancel', doctors_path, class: "btn btn-danger" %>
   </div>
+    </div>
+</div>
 <% end %>
