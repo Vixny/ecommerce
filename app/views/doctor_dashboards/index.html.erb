@@ -1,0 +1,7 @@
+<% if doctors_office_signed_in? %>
+<p><%= link_to destroy_doctors_office_session_path, :method => :delete do %>
+<i class="fa fa-sign-out fa-fw"></i> Logout
+                          <% end %></p>
+<% end %>
+<h1>DoctorDashboards#index</h1>
+<p>Find me in app/views/doctor_dashboards/index.html.erb</p>

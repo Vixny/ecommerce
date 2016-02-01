@@ -1,13 +1,26 @@
 Rails.application.routes.draw do
+  devise_for :doctors_offices
+  devise_for :users
   resources :doctors
   resources :medications
   resources :customers
   get 'pages/index'
+  get 'users/index'
+  get 'doctor_dashboards/index'
+
 
   devise_for :admin
-  
+
   authenticated :admin do
     root to: 'dashboards#index', as: :root_path
+  end
+
+  authenticated :user do
+    root to: 'users#index', as: :user_path
+  end
+
+  authenticated :doctors_office do
+    root to: 'doctor_dashboards#index', as: :doctors_office_path
   end
 
   root 'pages#index'
